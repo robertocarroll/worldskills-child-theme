@@ -3,5 +3,48 @@
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
 
-$purple: #5533ff; // Thats a sample how you could change a BootStrap variable.
-$primary: $purple;  // Once we've changed the value, we'll also make it the primary brand color.
+
+//
+// Color system
+//
+
+$primary: $pink;
+$secondary: $purple;
+$info: $cyan;
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+);
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: theme-color("primary");
+$link-hover-color: $pink-tint-1;
+
+
+// Pagination
+
+$pagination-color: $pink;
+$pagination-border-color: $pink;
+
+$pagination-hover-color: $white;
+$pagination-hover-bg: $link-color;
+$pagination-hover-border-color: $link-color;
+
+$pagination-active-color: $white;
+$pagination-active-bg: $purple;
+$pagination-active-border-color: $purple;
+
+$pagination-disabled-color: $gray-400;
+$pagination-disabled-border-color: $pink;
+
+
+// Breadcrumbs
+
+$breadcrumb-divider-color: $blue-dark;
+$breadcrumb-active-color: $body-color;
+$breadcrumb-active-font-weight: bold;
