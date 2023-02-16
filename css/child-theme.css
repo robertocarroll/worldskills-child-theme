@@ -15281,6 +15281,11 @@ a.navbar-link {
   color: white;
 }
 
+.ws-navbar-main .nav-item {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 a:hover.navbar-link,
 a:active.navbar-link {
   border-bottom: 4px solid white;
