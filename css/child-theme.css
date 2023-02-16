@@ -15273,6 +15273,14 @@ a.skip-link {
   display: block;
 }
 
+:root {
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+  font-family: var(--system-ui);
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0E779F;
