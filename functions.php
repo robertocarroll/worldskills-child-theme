@@ -32,6 +32,7 @@ function add_child_theme_textdomain() {
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
+// Solution found here: https://wordpress.stackexchange.com/a/256985
 function wp_customizer_setting($wp_customize) {
     // add a setting 
         $wp_customize->add_setting('wp_header_logo');

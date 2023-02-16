@@ -4,3 +4,7 @@ $system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple 
 body {
     font-family: $system-ui;
 }
+
+a.navbar-brand {
+    color: white;
+}
