@@ -35,12 +35,12 @@ add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 // Solution found here: https://wordpress.stackexchange.com/a/256985
 function wp_customizer_setting($wp_customize) {
     // add a setting 
-        $wp_customize->add_setting('wp_header_logo');
+        $wp_customize->add_setting('wp_theme_mods[wp_header_logo]');
     // Add a control to upload the hover logo
-        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'your_theme_hover_logo', array(
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'wp_header_logo', array(
             'label' => 'Upload Header Logo',
             'section' => 'title_tagline', //this is the section where the custom-logo from WordPress is
-            'settings' => 'wp_header_logo',
+            'settings' => 'wp_theme_mods[wp_header_logo]',
             'priority' => 8 // show it just below the custom-logo
         )));
     }

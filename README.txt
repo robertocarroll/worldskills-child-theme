@@ -13,5 +13,8 @@
 3. Upload logo is for all pages except home
 4. Homepage logo is for homepage only to allow the full logo to be used 
 
+## Homepage
+1. Appearance > Customise > Homepage settings
+2. Choice between a static page and your latest post
 
 ## Top navigation 

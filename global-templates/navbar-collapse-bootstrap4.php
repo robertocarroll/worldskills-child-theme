@@ -60,3 +60,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php endif; ?>
 
 </nav><!-- .site-navigation -->
+
+<?php if ( is_front_page () ) : ?>
+	<?php if( has_custom_logo() ):  ?>
+        <?php 
+            // Get Custom Logo URL
+            $custom_logo_id = get_theme_mod( 'wp_theme_mods' );
+        ?>
+
+	<div class="container">
+    
+	<div class="ws-hero-logo w-25">
+
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" 
+           title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" 
+           rel="home">
+		   
+            <img src="<?php echo $custom_logo_id['wp_header_logo'] ?>" 
+                 alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"/>
+
+        </a>
+    </div>
+</div>
+<?php endif; ?>
+<?php endif; ?>
