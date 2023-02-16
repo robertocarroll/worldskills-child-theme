@@ -31,3 +31,17 @@ function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+function wp_customizer_setting($wp_customize) {
+    // add a setting 
+        $wp_customize->add_setting('wp_header_logo');
+    // Add a control to upload the hover logo
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'your_theme_hover_logo', array(
+            'label' => 'Upload Header Logo',
+            'section' => 'title_tagline', //this is the section where the custom-logo from WordPress is
+            'settings' => 'wp_header_logo',
+            'priority' => 8 // show it just below the custom-logo
+        )));
+    }
+    
+    add_action('customize_register', 'wp_customizer_setting');
