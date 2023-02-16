@@ -46,9 +46,3 @@ function wp_customizer_setting($wp_customize) {
     }
     
     add_action('customize_register', 'wp_customizer_setting');
-
-
- /**
- * Add custom blocks for gutenberg
- */
-require_once get_stylesheet_directory_uri() . '/blocks/blocks.php';  
