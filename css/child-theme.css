@@ -15277,8 +15277,15 @@ body {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-a.navbar-brand {
+a.navbar-link {
   color: white;
+}
+
+a:hover.navbar-link,
+a:active.navbar-link {
+  border-bottom: 4px solid white;
+  padding-bottom: -4px;
+  text-decoration: none;
 }
 
 .has-blue-color,

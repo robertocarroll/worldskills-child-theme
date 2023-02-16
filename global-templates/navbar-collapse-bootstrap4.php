@@ -34,8 +34,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<?php endif; ?>
 
-			<?php else : ?>			
-				<a class="navbar-brand m-0" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+			<?php else : ?>		
+				<div class="navbar-brand m-0">	
+					<a class="navbar-link" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+			</div>	
 			<?php endif; ?>
 	
 		<!-- end custom logo -->

@@ -5,6 +5,13 @@ body {
     font-family: $system-ui;
 }
 
-a.navbar-brand {
+a.navbar-link {
     color: white;
+}
+
+a:hover.navbar-link,
+a:active.navbar-link {
+    border-bottom: 4px solid white;
+    padding-bottom: -4px;
+    text-decoration: none;
 }
