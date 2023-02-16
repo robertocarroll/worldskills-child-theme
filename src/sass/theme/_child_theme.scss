@@ -15,3 +15,22 @@ a:active.navbar-link {
     padding-bottom: -4px;
     text-decoration: none;
 }
+
+@media (min-width: 768px) {
+    .ws-navbar-main {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .ws-navbar-main .nav-link {
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+    }
+
+    .ws-navbar-main .nav-item.active .nav-link,
+    .ws-navbar-sub .nav-item.active .nav-link {
+        padding-bottom: 12px;
+        border-bottom: 4px solid #72d0eb;
+        color: white;
+    }
+}
