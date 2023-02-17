@@ -59,3 +59,15 @@ function wp_customizer_setting($wp_customize) {
         );
       }
       add_action( 'init', 'register_ws_menus' );
+
+
+ // utility function to get menu name 
+ //https://wordpress.stackexchange.com/questions/174147/calling-the-menu-title-within-wp-nav-menu-array-function
+      function ws_get_menu_by_location($location) {
+        if(empty($location)) return false;
+    
+        $locations = get_nav_menu_locations();
+        if(!isset($locations[$location])) return false;
+    
+        return get_term( $locations[$location], 'nav_menu' );
+    }    

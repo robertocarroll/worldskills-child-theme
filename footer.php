@@ -35,7 +35,9 @@
 
     
 <div class="ws-content mb-5">
-test
+
+<?php $menu_obj_social = ws_get_menu_by_location('footer-social'); 
+echo "<h1>".esc_html($menu_obj_social->name)."</h1>";?> 
 <?php wp_nav_menu( array( 'theme_location' => 'footer-social' ) ); ?>
 </div>
 
