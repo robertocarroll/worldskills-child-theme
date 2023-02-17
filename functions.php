@@ -54,6 +54,8 @@ function wp_customizer_setting($wp_customize) {
         register_nav_menus(
           array(
             'footer-menu-1' => __( 'Footer Menu 1' ),
+            'footer-menu-2' => __( 'Footer Menu 2' ),
+            'footer-menu-3' => __( 'Footer Menu 3' ),
             'footer-social' => __( 'Footer Menu Social' )
           )
         );
