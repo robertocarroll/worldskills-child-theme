@@ -1,0 +1,83 @@
+<footer class="ws-page-footer">
+        <div class="container">
+            <div class="ws-page-footer-row">
+                <aside class="ws-page-footer-col-sm">
+                    
+
+    
+<div class="ws-content mb-5">
+
+   Menu 1
+</div>
+
+                </aside>
+                <aside class="ws-page-footer-col-sm">
+                    
+
+    
+<div class="ws-content mb-5">
+
+   menu 2
+</div>
+
+                </aside>
+                <aside class="ws-page-footer-col-sm">
+                    
+
+    
+<div class="ws-content mb-5">
+menu 3
+</div>
+
+                </aside>
+                <aside class="ws-page-footer-col-sm">
+                    
+
+    
+<div class="ws-content mb-5">
+
+ social menu
+</div>
+
+                </aside>
+                <aside class="ws-page-footer-col-md">
+                    
+
+    
+<div class="ws-content mb-5">
+
+    <h1>Search</h1>
+</div>
+
+
+
+    
+<form action="https://member-website.worldskills.org/" method="get" class="search-form" role="search">
+
+            <input name="search_paths[]" type="hidden" value="">
+    
+    <label class="sr-only" for="page-footer-search">Search</label>
+    <input type="text" name="query" class="form-control" id="page-footer-search" placeholder="Search">
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+                </aside>
+            </div>
+            <div class="ws-page-footer-row">
+                <div class="ws-page-footer-col-lg">
+                    
+
+    
+<div class="ws-content mb-5">
+
+    <ul class="list-inline"><li class="list-inline-item">© 2018 WorldSkills Member</li><li class="list-inline-item"><a href="#">Privacy</a></li></ul>
+</div>
+
+                </div>
+                <div class="ws-page-footer-col-lg">
+                    <p class="text-md-right">
+                        <a href="https://member-website.worldskills.org/login/">Log in</a>                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
