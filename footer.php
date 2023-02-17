@@ -77,7 +77,7 @@ echo "<h1>".esc_html($menu_obj_social->name)."</h1>";?>
                 </div>
                 <div class="ws-page-footer-col-lg">
                     <p class="text-md-right">
-                        <a href="https://member-website.worldskills.org/login/">Log in</a>                    </p>
+                        <a href="/login/">Log in</a>                    </p>
                 </div>
             </div>
         </div>
