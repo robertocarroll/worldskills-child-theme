@@ -6,7 +6,8 @@
 
     
 <div class="ws-content mb-5">
-
+<?php $menu_obj_footer_1 = ws_get_menu_by_location('footer-menu-1'); 
+echo "<h1>".esc_html($menu_obj_footer_1->name)."</h1>";?> 
 <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-1' ) ); ?>
 </div>
 
