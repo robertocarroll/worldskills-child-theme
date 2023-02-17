@@ -49,14 +49,13 @@ function wp_customizer_setting($wp_customize) {
 
 
  // add menus 
-    function wpb_custom_new_menu() {
+
+      function register_ws_menus() {
         register_nav_menus(
           array(
             'footer-menu-1' => __( 'Footer Menu 1' ),
-            'footer-menu-2' => __( 'Footer Menu 2' ),
-            'footer-menu-3' => __( 'Footer Menu 3' ),
-            'footer-menu-4' => __( 'Footer Menu Social' )
+            'footer-social' => __( 'Footer Menu Social' )
           )
         );
       }
-      add_action( 'init', 'wpb_custom_new_menu' );    
+      add_action( 'init', 'register_ws_menus' );

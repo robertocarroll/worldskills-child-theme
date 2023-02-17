@@ -7,7 +7,7 @@
     
 <div class="ws-content mb-5">
 
-   Menu 1
+<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-1' ) ); ?>
 </div>
 
                 </aside>
@@ -17,16 +17,7 @@
     
 <div class="ws-content mb-5">
 
-   menu 2
-</div>
 
-                </aside>
-                <aside class="ws-page-footer-col-sm">
-                    
-
-    
-<div class="ws-content mb-5">
-menu 3
 </div>
 
                 </aside>
@@ -36,7 +27,16 @@ menu 3
     
 <div class="ws-content mb-5">
 
- social menu
+</div>
+
+                </aside>
+                <aside class="ws-page-footer-col-sm">
+                    
+
+    
+<div class="ws-content mb-5">
+test
+<?php wp_nav_menu( array( 'theme_location' => 'footer-social' ) ); ?>
 </div>
 
                 </aside>
@@ -50,8 +50,6 @@ menu 3
 </div>
 
 
-
-    
 <form action="https://member-website.worldskills.org/" method="get" class="search-form" role="search">
 
             <input name="search_paths[]" type="hidden" value="">
