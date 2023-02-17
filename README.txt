@@ -18,3 +18,23 @@
 2. Choice between a static page and your latest post
 
 ## Top navigation 
+One menu for the header: Primary Menu
+
+## Footer navigation 
+Four menus for the footer: 
+
+1. Footer Menu 1	
+2. Footer Menu 2	
+3. Footer Menu 3	
+4. Footer Menu Social
+
+Fallback is set to false, so if there is no menu it is left blank. 
+
+## Footer social icons 
+Added a menu filter to replace short codes with SVG icons (in functions.php). To show an icon and the word use:
+- %FACEBOOK_SVG%Facebook
+- %TWITTER_SVG%Twitter
+- %YOUTUBE_SVG%YouTube
+- %FLICKR_SVG%Flickr
+- %INSTAGRAM_SVG%Instagram
+- %LINKEDIN_SVG%LinkedIn
