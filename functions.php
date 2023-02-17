@@ -46,3 +46,17 @@ function wp_customizer_setting($wp_customize) {
     }
     
     add_action('customize_register', 'wp_customizer_setting');
+
+
+ // add menus 
+    function wpb_custom_new_menu() {
+        register_nav_menus(
+          array(
+            'footer-menu-1' => __( 'Footer Menu 1' ),
+            'footer-menu-2' => __( 'Footer Menu 2' ),
+            'footer-menu-3' => __( 'Footer Menu 3' ),
+            'footer-menu-4' => __( 'Footer Menu Social' )
+          )
+        );
+      }
+      add_action( 'init', 'wpb_custom_new_menu' );    
