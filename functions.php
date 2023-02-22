@@ -167,3 +167,53 @@ function wp_customizer_setting($wp_customize) {
         return $items;
     }
     add_filter( 'wp_nav_menu_items', 'find_replace_tiktok', 10, 2 );   
+
+// breadcrumb
+
+function ws_breadcrumb() {
+
+    if (!is_front_page()) {
+	
+	// Start the breadcrumb with a link to your homepage
+        echo '<nav aria-label="breadcrumb" class="d-print-none">
+        <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <a href="https://member-website.worldskills.org/" target="_self" itemprop="item">
+            <span itemprop="name">Home</span>
+        </a>
+        <meta itemprop="position" content="1">
+    </li>';
+
+	// Check if the current page is a category, an archive or a single page. If so show the category or archive name.
+        if (is_category() || is_single() ){
+            the_category('title_li=');
+        } elseif (is_archive() || is_single()){
+            if ( is_day() ) {
+                printf( __( '%s', 'text_domain' ), get_the_date() );
+            } elseif ( is_month() ) {
+                printf( __( '%s', 'text_domain' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'text_domain' ) ) );
+            } elseif ( is_year() ) {
+                printf( __( '%s', 'text_domain' ), get_the_date( _x( 'Y', 'yearly archives date format', 'text_domain' ) ) );
+            } else {
+                _e( 'Blog Archives', 'text_domain' );
+            }
+        }
+	
+	// If the current page is a single post, show its title with the separator
+        if (is_single()) {
+            echo $sep;
+            the_title();
+        }
+	
+	// If the current page is a static page, show its title.
+        if (is_page()) {
+            echo '<li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-current="page">
+            <span itemprop="name">';
+             echo the_title();
+             echo '</span>
+            <meta itemprop="position" content="2">
+        </li>';
+        }
+
+        echo '  </ol></nav>';
+    }
+}       

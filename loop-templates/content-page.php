@@ -9,6 +9,8 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
+<?php ws_breadcrumb() ?>
+
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<?php
