@@ -170,6 +170,8 @@ function wp_customizer_setting($wp_customize) {
 
 // breadcrumb
 
+//more complicated version: https://github.com/ahmadthedev/wp-breadcrumb-function/blob/master/functions.php
+
 function ws_breadcrumb() {
 
     if (!is_front_page()) {
@@ -185,7 +187,12 @@ function ws_breadcrumb() {
 
 	// Check if the current page is a category, an archive or a single page. If so show the category or archive name.
         if (is_category() || is_single() ){
-            the_category('title_li=');
+            echo '<li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-current="page">
+            <span itemprop="name">';
+             echo the_category(' ');
+             echo '</span>
+            <meta itemprop="position" content="2">
+        </li>';
         } elseif (is_archive() || is_single()){
             if ( is_day() ) {
                 printf( __( '%s', 'text_domain' ), get_the_date() );
@@ -200,8 +207,12 @@ function ws_breadcrumb() {
 	
 	// If the current page is a single post, show its title with the separator
         if (is_single()) {
-            echo $sep;
-            the_title();
+            echo '<li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-current="page">
+            <span itemprop="name">';
+             echo the_title();
+             echo '</span>
+            <meta itemprop="position" content="2">
+        </li>';
         }
 	
 	// If the current page is a static page, show its title.
